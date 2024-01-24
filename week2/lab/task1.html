@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .tshirt-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .tshirt {
+            text-align: center;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .tshirt img {
+            width: 100%; /* Make the image fill the container */
+            max-height: 200px; /* Limit the maximum height */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            color: #333;
+        }
+    </style>
+    <title>T-Shirt Page</title>
+</head>
+<body>
+    <div class="tshirt-container">
+        <div class="tshirt">
+            <img src="classic.jpg" alt="Classic Black Tee">
+            <div class="details">
+                <h2>Classic Black Tee</h2>
+                <p>Style: Casual</p>
+                <p>Material: Cotton</p>
+                <p>Color: Black</p>
+                <p style="color: red;">Price: $19.99</p>
+            </div>
+        </div>
+
+        <div class="tshirt">
+            <img src="graphic.jpg" alt="Graphic Print Tee">
+            <div class="details">
+                <h2>Graphic Print Tee</h2>
+                <p>Style: Trendy</p>
+                <p>Material: Polyester</p>
+                <p>Design: Abstract Print</p>
+                <p style="color: red;">Price: $24.99</p>
+            </div>
+        </div>
+
+        <div class="tshirt">
+            <img src="stripped.jpg" alt="Striped Polo Shirt">
+            <div class="details">
+                <h2>Striped Polo Shirt</h2>
+                <p>Style: Business Casual</p>
+                <p>Material: Cotton Blend</p>
+                <p>Pattern: Stripes</p>
+                <p style="color: red;">Price: $29.99</p>
+            </div>
+        </div>
+
+        <div class="tshirt">
+            <img src="v_neck.jpg" alt="V-Neck Comfy Tee">
+            <div class="details">
+                <h2>V-Neck Comfy Tee</h2>
+                <p>Style: Comfort Fit</p>
+                <p>Material: Modal</p>
+                <p>Neckline: V-Neck</p>
+                <p style="color: red;">Price: $22.99</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
