@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function multiplyArrayElementsByUserInput(array, operationFunction) {
+          
+            let userInput = prompt('Enter a number to multiply each element of the array:');
+            let multiplier = parseFloat(userInput);
+
+   
+            if (isNaN(multiplier)) {
+                console.log('Invalid input. Please enter a valid number.');
+                return;
+            }
+            let resultArray = operationFunction(multiplier, array);
+            console.log('Result after multiplying:', resultArray);
+        }
+
+        function multiplyArrayByMultiplier(multiplier, array) {
+            let resultArray = [];
+            for (let i = 0; i < array.length; i++) {
+                resultArray.push(array[i] * multiplier);
+            }
+            return resultArray;
+        }
+
+</body>
+</html>

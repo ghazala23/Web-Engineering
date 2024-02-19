@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+     
+        let colors = ['red', 'green', 'blue', 'yellow'];
+
+        console.log(colors[0]); // Output: red
+        console.log(colors[2]); // Output: blue
+
+        colors[1] = 'purple';
+        colors.push('orange');
+        let removedColor = colors.pop();
+
+        // Displaying the modified array
+        console.log(colors); // Output: ['red', 'purple', 'blue', 'orange']
+        console.log('Removed color:', removedColor); // Output: Removed color: orange
+
+    </script>
+
+</body>
+</html>

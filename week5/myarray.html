@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        let songs = ['Shape of You', 'Bohemian', 'Blinding Lights', 'Imagine demons', 'Hey Jude'];
+        console.log("songs array:", songs);
+
+        //addding element
+        songs.push("Escapism")
+        console.log("after push:", songs)
+
+        let shiftedSong = songs.shift();
+        console.log('Shifted song:', shiftedSong);
+        console.log('After shift:', songs);
+
+        songs.unshift('Stairway to Heaven', 'somewhere only we know');
+        console.log('After unshift:', songs);
+        songs.push("Shape of you")
+
+        //array 2
+        let songs2 = ['Billie jean', 'Thriller', 'Beat it', 'blood on the dance floor', 'dirty diana'];
+        let songslist = songs.concat(songs2)
+        console.log("after concatenating:", songslist)
+
+        let favsongs = songslist.slice(3,13 )
+        console.log("after slicing fav songs:", favsongs)
+
+
+
+    </script>
+
+</body>
+</html>

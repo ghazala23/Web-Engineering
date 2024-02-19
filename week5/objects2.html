@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        let person = {
+            firstName: 'ghazalaa',
+            lastName: 'bhutto',
+            age: 23,
+            isStudent: true,
+            address: {
+                city: 'khairpur',
+                country: 'pakistan Country'
+            },
+            sayHello: function () {
+                console.log('Hello, my name is ' + this.firstName + ' ' + this.lastName + '.');
+            }
+        };
+        console.log(person.firstName);
+        console.log(person.age);
+        console.log(person.address.city); // Output: Example City
+
+   
+        person.sayHello();
+
+        // Modifying a property
+        person.age = 31;
+
+        // Adding a new property
+        person.gender = 'Male';
+
+        console.log(person.isStudent);
+
+        // Object.keys(obj): Returns an array of object's own enumerable property names.
+        let keys = Object.keys(person);
+        console.log('Keys:', keys);
+
+        // Object.values(obj): Returns an array of object's own enumerable property values.
+        let values = Object.values(person);
+        console.log('Values:', values);
+
+        // Object.entries(obj): Returns an array of object's own enumerable [key, value] pairs.
+        let entries = Object.entries(person);
+        console.log('Entries:', entries);
+
+        person.maritalStatus = 'Single';
+
+        // Displaying the modified object
+        console.log('Person:', person);
+
+        // another portion
+
+
+
+
+        // Object.assign(target, ...sources): Copies the values of all enumerable own properties to a target object.
+        let clonedPerson = Object.assign({}, person);
+
+        // Object.getOwnPropertyNames(obj): Returns an array of all properties (enumerable or not).
+        let allProperties = Object.getOwnPropertyNames(person);
+        console.log('All Properties:', allProperties);
+
+        // Object.freeze(obj): Freezes an object, making it immutable.
+        Object.freeze(person);
+        // The following line will throw an error in strict mode or silently fail in non-strict mode.
+        // person.age = 31;
+
+        // Object.seal(obj): Prevents new properties from being added and marks existing properties as non-configurable.
+        Object.seal(person);
+        // The following line will throw an error in strict mode or silently fail in non-strict mode.
+        // person.gender = 'Male';
+
+        // Displaying the modified object
+        console.log('Original Person:', person);
+        console.log('Cloned Person:', clonedPerson);
+
+
+    </script>
+
+</body>
+</html>
