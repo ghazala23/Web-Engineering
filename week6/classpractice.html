@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let salary = [10000, 9000, 20000, 25000, 100000];
+
+function myFunction(num) {
+    let inc;
+
+    if (num >= 5000 && num <= 10000) {
+        inc = num / 10;
+        num = inc + num;
+    } else if (num > 10000 && num <= 50000) {
+        inc = num / 8;
+        num = inc + num;
+    } else if (num > 50000) {
+        inc = num / 5;
+        num = inc + num;
+    }
+
+    return num;
+}
+
+let newArray = salary.map(myFunction);
+console.log(newArray);
+
+    </script>
+</body>
+</html>
+
+
