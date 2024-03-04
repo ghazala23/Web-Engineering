@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <style>
+    body {
+      background-image: url('todo.jpg'); /* Replace 'todo.jpg' with your actual background image */
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      color: white; /* Set text color to white for better visibility */
+    }
+
+    #taskList {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px;
+      background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for better contrast */
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    input[type="text"],
+    button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: #333; /* Dark background color for input and button */
+      color: white; /* Set text color to white for better visibility */
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Make A List NOW</h1>
+
+  <input type="text" id="newTask" placeholder="Enter a new task">
+  <button onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      const newTaskInput = document.getElementById("newTask");
+      const taskList = document.getElementById("taskList");
+
+      if (newTaskInput.value.trim() === "") {
+        alert("Please enter a task.");
+        return;
+      }
+
+      const taskText = newTaskInput.value;
+      newTaskInput.value = "";
+
+      const taskItem = document.createElement("li");
+      taskItem.innerHTML = `
+        <input type="checkbox" onclick="toggleCompleted(this)">
+        <span>${taskText}</span>
+        <button onclick="removeTask(this)">Remove</button>
+      `;
+
+      taskList.appendChild(taskItem);
+    }
+
+    function toggleCompleted(checkbox) {
+      const taskText = checkbox.nextElementSibling;
+      taskText.classList.toggle("completed");
+    }
+
+    function removeTask(button) {
+      const taskItem = button.parentElement;
+      taskItem.remove();
+    }
+  </script>
+</body>
+</html>
